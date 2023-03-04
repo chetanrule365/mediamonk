@@ -1,0 +1,230 @@
+@import "animations.css";
+@font-face {
+  font-family: "klavika";
+  src: url("./../assets/font/klavika-regular-webfont.woff");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  font-family: "klavika";
+}
+
+html,
+body {
+  height: 100vh;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.underline {
+  border-bottom: 1px solid #ffffff;
+}
+
+.splash {
+  height: 100%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  animation: fadeOut 1s 3s;
+}
+
+.splash img {
+  width: 120px;
+  animation: fadeIn 0.3s ease-in, levitate 1.5s infinite ease-in-out;
+}
+
+.splash p {
+  visibility: hidden;
+  transform: translateX(60px);
+  transition: 0.3s;
+  animation: fadeIn 1s ease-in;
+}
+
+.splash span {
+  visibility: hidden;
+  transform: translateX(60px);
+}
+
+.home {
+  display: none;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.home .content {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  gap: 500px;
+}
+
+.background-img {
+  height: 100%;
+}
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  z-index: 10;
+  width: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  visibility: hidden;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.right-arrow {
+  right: 0;
+  visibility: visible;
+}
+
+.section-title {
+  position: absolute;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.center-left {
+  left: 88px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-right {
+  right: 88px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.top-left {
+  top: 88px;
+  left: 88px;
+}
+
+.contact {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: end;
+  padding: 24px;
+}
+
+.contact a {
+  color: #ffffff;
+}
+
+.contact-title {
+  font-size: 48px;
+  width: fit-content;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  width: 420px;
+}
+
+.contact .social {
+  display: flex;
+  gap: 16px;
+}
+
+.contact .social a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.contact .social a img {
+  width: 24px;
+  height: 24px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.logo {
+  width: 100px;
+  position: absolute;
+  right: 24px;
+  bottom: 0px;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.pagination button {
+  background: none;
+  width: 32px;
+  height: 32px;
+  outline: none;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px dashed #ffffff;
+}
+
+@media screen and (max-width: 680px) {
+  .left-arrow,
+  .right-arrow {
+    width: 40px;
+  }
+
+  .logo {
+    visibility: hidden;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .center-left {
+    left: 48px;
+  }
+
+  .center-right {
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .top-left {
+    top: 88px;
+    left: 48px;
+  }
+
+  .contact-details {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .section-title {
+    font-size: 24px;
+  }
+}
