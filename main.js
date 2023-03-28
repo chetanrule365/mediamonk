@@ -91,15 +91,7 @@ var paginationArr = [
 ];
 var currentSlide = 1;
 setTimeout(function () {
-    splashTxt.style.visibility = "visible";
-}, 1000);
-setTimeout(function () {
-    splashTxt.style.transform = "translateX(0)";
-    splashTxtSpan.style.visibility = "visible";
-}, 2000);
-setTimeout(function () {
     splashScreen.style.display = "none";
-    home.style.display = "block";
 }, 4000);
 var createSectionTitle = function (_a) {
     var text = _a.text, position = _a.position;

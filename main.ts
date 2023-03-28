@@ -92,17 +92,7 @@ const paginationArr = [
 var currentSlide = 1;
 
 setTimeout(() => {
-  splashTxt.style.visibility = "visible";
-}, 1000);
-
-setTimeout(() => {
-  splashTxt.style.transform = "translateX(0)";
-  splashTxtSpan.style.visibility = "visible";
-}, 2000);
-
-setTimeout(() => {
   splashScreen.style.display = "none";
-  home.style.display = "block";
 }, 4000);
 
 const createSectionTitle = ({ text, position }) => {
@@ -174,7 +164,6 @@ paginationArr.forEach(({ value, scroll = null, title }, i) => {
       rightArrow.style.visibility = "hidden";
     if (!value) leftArrow.style.visibility = "hidden";
     if (value >= 1) leftArrow.style.visibility = "visible";
-
     handleScroll(scroll, title);
     currentSlide = Number(value) + 1;
   });

@@ -24,14 +24,18 @@ body {
 }
 
 .splash {
+  position: absolute;
+  width: 100vw;
   height: 100%;
+  z-index: 100;
+  background: #000000;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 16px;
-  animation: fadeOut 1s 3s;
+  animation: fadeOut 1s 3s forwards;
 }
 
 .splash img {
@@ -40,20 +44,21 @@ body {
 }
 
 .splash p {
-  visibility: hidden;
+  opacity: 0;
   transform: translateX(60px);
   transition: 0.3s;
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 0.5s 0.5s ease-in forwards, slideLeft 0.5s 1s forwards;
 }
 
 .splash span {
-  visibility: hidden;
+  opacity: 0;
   transform: translateX(60px);
+  animation: fadeIn 0.5s 1.5s ease-in forwards, slideLeft 0.5s 1.5s forwards;
 }
 
 .home {
-  display: none;
-  animation: fadeIn 0.5s ease-in;
+  opacity: 0;
+  animation: fadeIn 0.5s 4s ease-in forwards;
 }
 
 .home .content {
